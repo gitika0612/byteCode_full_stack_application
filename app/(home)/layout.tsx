@@ -5,7 +5,9 @@ import React from "react";
 const layout = async ({ children }: { children: React.ReactNode }) => {
     const user = await currentUser();
 
-    if (!user) return null;
+    if (!user) {
+        return <>{children}</>
+    }
 
     const loggedInUser = await prisma.user.findUnique({
         where: {
