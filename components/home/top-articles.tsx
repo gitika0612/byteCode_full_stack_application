@@ -39,7 +39,7 @@ const TopArticles = async () => {
                             <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage src={article.author.imageUrl as string} />
-                                    <AvatarFallback>CN</AvatarFallback>
+                                    <AvatarFallback>{article.author.name}</AvatarFallback>
                                 </Avatar>
                                 <span>{article.author.name}</span>
                             </div>
